@@ -1,0 +1,15 @@
+{
+  "name": "Yasin & Tahlil",
+  "short_name": "Yasin Tahlil",
+  "description": "Surah Yasin, bacaan Tahlil dengan penghitung, dan jadwal sholat & imsak.",
+  "lang": "id",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f9f8f1",
+  "theme_color": "#1f5a46",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

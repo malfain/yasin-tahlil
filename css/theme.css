@@ -1,0 +1,88 @@
+/* Tema Muslim: hijau zamrud + emas di atas gading */
+.theme-muslim {
+  --background: oklch(0.985 0.008 95);
+  --foreground: oklch(0.24 0.035 168);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.035 168);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.035 168);
+  --primary: oklch(0.46 0.095 165);
+  --primary-foreground: oklch(0.985 0.008 95);
+  --secondary: oklch(0.95 0.025 160);
+  --secondary-foreground: oklch(0.32 0.07 166);
+  --muted: oklch(0.96 0.018 140);
+  --muted-foreground: oklch(0.47 0.03 165);
+  --accent: oklch(0.95 0.025 160);
+  --accent-foreground: oklch(0.32 0.07 166);
+  --border: oklch(0.89 0.03 150);
+  --input: oklch(0.87 0.03 150);
+  --ring: oklch(0.46 0.095 165);
+  --gold: oklch(0.74 0.12 82);
+  --gold-foreground: oklch(0.24 0.04 70);
+  --hero: oklch(0.38 0.08 166);
+  --hero-foreground: oklch(0.985 0.008 95);
+  --hero-muted: oklch(0.86 0.04 150);
+  --hero-line: oklch(1 0 0 / 18%);
+  --hero-soft: oklch(1 0 0 / 9%);
+}
+.theme-muslim.dark {
+  --background: oklch(0.19 0.025 170);
+  --foreground: oklch(0.96 0.012 95);
+  --card: oklch(0.23 0.03 170);
+  --card-foreground: oklch(0.96 0.012 95);
+  --popover: oklch(0.23 0.03 170);
+  --popover-foreground: oklch(0.96 0.012 95);
+  --primary: oklch(0.8 0.12 84);
+  --primary-foreground: oklch(0.2 0.03 170);
+  --secondary: oklch(0.28 0.035 170);
+  --secondary-foreground: oklch(0.96 0.012 95);
+  --muted: oklch(0.26 0.03 170);
+  --muted-foreground: oklch(0.77 0.03 150);
+  --accent: oklch(0.28 0.035 170);
+  --accent-foreground: oklch(0.96 0.012 95);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.8 0.12 84);
+  --gold: oklch(0.8 0.12 84);
+  --gold-foreground: oklch(0.2 0.03 170);
+  --hero: oklch(0.3 0.06 168);
+  --hero-foreground: oklch(0.97 0.01 95);
+  --hero-muted: oklch(0.82 0.04 150);
+}
+/* Warna ikon menu Bacaan */
+.theme-muslim {
+  --tile-emerald: oklch(0.93 0.06 160);
+  --tile-emerald-fg: oklch(0.45 0.13 160);
+  --tile-teal: oklch(0.93 0.06 195);
+  --tile-teal-fg: oklch(0.45 0.13 195);
+  --tile-gold: oklch(0.93 0.06 80);
+  --tile-gold-fg: oklch(0.45 0.13 80);
+  --tile-violet: oklch(0.93 0.06 300);
+  --tile-violet-fg: oklch(0.45 0.13 300);
+  --tile-rose: oklch(0.93 0.06 15);
+  --tile-rose-fg: oklch(0.45 0.13 15);
+  --tile-sky: oklch(0.93 0.06 240);
+  --tile-sky-fg: oklch(0.45 0.13 240);
+  --tile-orange: oklch(0.93 0.06 50);
+  --tile-orange-fg: oklch(0.45 0.13 50);
+  --tile-slate: oklch(0.93 0.02 250);
+  --tile-slate-fg: oklch(0.45 0.04 250);
+}
+.theme-muslim.dark {
+  --tile-emerald: oklch(0.33 0.07 160);
+  --tile-emerald-fg: oklch(0.87 0.1 160);
+  --tile-teal: oklch(0.33 0.07 195);
+  --tile-teal-fg: oklch(0.87 0.1 195);
+  --tile-gold: oklch(0.33 0.07 80);
+  --tile-gold-fg: oklch(0.87 0.1 80);
+  --tile-violet: oklch(0.33 0.07 300);
+  --tile-violet-fg: oklch(0.87 0.1 300);
+  --tile-rose: oklch(0.33 0.07 15);
+  --tile-rose-fg: oklch(0.87 0.1 15);
+  --tile-sky: oklch(0.33 0.07 240);
+  --tile-sky-fg: oklch(0.87 0.1 240);
+  --tile-orange: oklch(0.33 0.07 50);
+  --tile-orange-fg: oklch(0.87 0.1 50);
+  --tile-slate: oklch(0.33 0.02 250);
+  --tile-slate-fg: oklch(0.87 0.03 250);
+}

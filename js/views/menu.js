@@ -1,6 +1,6 @@
-// Drawer menu fitur: panel geser dari kiri + backdrop, grup akordeon, kartu "Hapus iklan".
+// Drawer menu fitur: panel geser dari kiri + backdrop, grup akordeon berisi tautan.
 import { icon } from '../icons.js';
-import { esc, toast, reducedMotion } from '../ui.js';
+import { esc, reducedMotion } from '../ui.js';
 import { MENU } from '../data/menu.js';
 
 export function createDrawer(root, { onClose }) {
@@ -33,22 +33,11 @@ export function createDrawer(root, { onClose }) {
               </button>
               <div class="acc-panel" id="acc-${it.id}">
                 <ul class="acc-inner">
-                  ${it.subs.map((s) => `<li><button type="button" class="sub-item" data-soon>${esc(s)}</button></li>`).join('')}
+                  ${it.subs.map(([name, href]) => `<li><a href="${href}" class="sub-item">${esc(name)}</a></li>`).join('')}
                 </ul>
               </div>
             </div>`).join('')}
         </section>`).join('')}
-    </div>
-    <div class="drawer-foot">
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Hapus iklan</h3>
-          <p class="card-desc">Baca tanpa gangguan dan dukung pengembangan aplikasi.</p>
-        </div>
-        <div class="card-content">
-          <button type="button" class="btn btn-default btn-block" data-soon>Dukung pengembangan</button>
-        </div>
-      </div>
     </div>
   </nav>`;
 
@@ -76,8 +65,7 @@ export function createDrawer(root, { onClose }) {
   root.addEventListener('click', (e) => {
     if (e.target.closest('[data-act="close"]')) { onClose(); return; }
     const tg = e.target.closest('[data-toggle]');
-    if (tg) { setAcc(openId === tg.dataset.toggle ? null : tg.dataset.toggle); return; }
-    if (e.target.closest('[data-soon]')) toast('Segera hadir');
+    if (tg) { setAcc(openId === tg.dataset.toggle ? null : tg.dataset.toggle); }
   });
 
   root.addEventListener('keydown', (e) => {

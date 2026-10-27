@@ -1,14 +1,24 @@
-// Router hash sederhana: #/, #/yasin[/ayat], #/tahlil, #/jadwal, #/menu[/grup].
+// Router hash sederhana: #/, #/yasin[/ayat], #/tahlil, #/jadwal, #/asma, #/surat, #/surah/<n>,
+// #/baca/<key>, #/kiblat, #/tasbih, #/kalender, #/zakat, #/menu[/grup].
 // Menu tampil sebagai drawer di atas layar yang sedang aktif.
 import * as home from './views/home.js';
 import * as yasin from './views/yasin.js';
 import * as tahlil from './views/tahlil.js';
 import * as jadwal from './views/jadwal.js';
+import * as asma from './views/asma.js';
+import * as surat from './views/surat.js';
+import * as surah from './views/surah.js';
+import * as baca from './views/baca.js';
+import * as kiblat from './views/kiblat.js';
+import * as tasbih from './views/tasbih.js';
+import * as kalender from './views/kalender.js';
+import * as zakat from './views/zakat.js';
 import { createDrawer } from './views/menu.js';
 import { autoDetect } from './location.js';
 
-const VIEWS = { '': home, yasin, tahlil, jadwal };
-const TITLES = { '': 'Yasin & Tahlil', yasin: 'Surah Yasin', tahlil: 'Tahlil', jadwal: 'Jadwal Sholat & Imsak' };
+const VIEWS = { '': home, yasin, tahlil, jadwal, asma, surat, surah, baca, kiblat, tasbih, kalender, zakat };
+const TITLES = { '': 'Yasin & Tahlil', yasin: 'Surah Yasin', tahlil: 'Tahlil', jadwal: 'Jadwal Sholat & Imsak', asma: 'Asmaul Husna', surat: 'Juz Amma & Surat Pilihan', surah: 'Surat', baca: 'Bacaan',
+  kiblat: 'Arah Kiblat', tasbih: 'Tasbih Digital', kalender: 'Kalender Hijriah', zakat: 'Kalkulator Zakat' };
 
 const host = document.getElementById('screen-host');
 const drawerEl = document.getElementById('drawer');
@@ -61,7 +71,7 @@ function route() {
   host.inert = false;
   drawer.close();
   const name = Object.prototype.hasOwnProperty.call(VIEWS, parts[0] || '') ? (parts[0] || '') : '';
-  const params = name === 'yasin' ? parts.slice(1, 2) : [];
+  const params = ['yasin', 'surah', 'baca'].includes(name) ? parts.slice(1, 2) : [];
   if (!name && parts.length) { location.replace('#/'); return; }
   mountView(name, params, !first);
 }

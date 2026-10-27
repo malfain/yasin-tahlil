@@ -5,8 +5,8 @@ export const FEATURES = [
   ['Surat Yasin', 'book', '#/yasin', 157],
   ['Tahlilan', 'beads', '#/tahlil', 202],
   ['Jadwal Sholat', 'clock', '#/jadwal', 67],
-  ['Juz Amma', 'bookClosed', '#/menu/juz', 112],
-  ['Asmaul Husna', 'star', '#/menu/asma', 292],
+  ['Juz Amma', 'bookClosed', '#/surat', 112],
+  ['Asmaul Husna', 'star', '#/asma', 292],
   ['Fasholatan', 'mosque', '#/menu/fasholatan', 247],
   ['Dzikir & Wirid', 'heart', '#/menu/dzikir', 337],
   ['Sholawat', 'crescent', '#/menu/sholawat', 270],
@@ -14,8 +14,8 @@ export const FEATURES = [
   ['Amalan Pilihan', 'listCheck', '#/menu/amalan', 90],
   ['Kitab Maulid', 'scroll', '#/menu/maulid', 45],
   ['Kumpulan MC', 'mic', '#/menu/mc', 225],
-  ['Arah Kiblat', 'compass', '#/menu/alat', 180],
-  ['Tasbih Digital', 'counter', '#/menu/alat', 22],
-  ['Kalender Hijriah', 'calendar', '#/menu/alat', 315],
+  ['Arah Kiblat', 'compass', '#/kiblat', 180],
+  ['Tasbih Digital', 'counter', '#/tasbih', 22],
+  ['Kalender Hijriah', 'calendar', '#/kalender', 315],
   ['Semua Menu', 'grid', '#/menu', 250, 0.3]
 ];

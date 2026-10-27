@@ -32,6 +32,7 @@ const PATHS = {
   scroll: '<path d="M8 21h10a3 3 0 0 0 3-3v-1H11v1a3 3 0 0 1-3 3 3 3 0 0 1-3-3V6a3 3 0 0 0-3-3h13a3 3 0 0 1 3 3v11"></path><path d="M2 3a3 3 0 0 1 3 3v2H2z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path>',
   counter: '<rect x="5" y="2" width="14" height="20" rx="7"></rect><rect x="8.5" y="6" width="7" height="4" rx="1"></rect><circle cx="12" cy="15.5" r="2.5"></circle>',
   calendar: '<rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path><path d="M14.5 13.2a3 3 0 1 0 0 5.6 2.5 2.5 0 0 1 0-5.6z"></path>',
+  search: '<circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path>',
   refresh: '<path d="M21 12a9 9 0 1 1-3-6.7L21 8"></path><path d="M21 3v5h-5"></path>'
 };
 

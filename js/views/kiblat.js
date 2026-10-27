@@ -30,12 +30,6 @@ const dirName = (b) => DIRS[Math.round(norm(b) / 45) % 8];
 const fmtDeg = (n) => n.toLocaleString('id-ID', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const fmtKm = (n) => Math.round(n).toLocaleString('id-ID');
 
-// Ikon lokal (garis, currentColor).
-const svgIcon = (body, size = 18) =>
-  `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
-const ICON_KAABA = '<path d="M4 7.5 12 4l8 3.5v10L12 21l-8-3.5z"></path><path d="M4 7.5 12 11l8-3.5"></path><path d="M12 11v10"></path><path d="M4 11l8 3.5 8-3.5"></path>';
-const ICON_PHONE = '<rect x="7" y="2" width="10" height="20" rx="2.5"></rect><path d="M11 18h2"></path>';
-
 // Piringan kompas: garis derajat, label U/T/S/B, dan penanda Ka'bah pada sudut kiblat.
 function dialSvg() {
   let ticks = '';
@@ -87,12 +81,12 @@ export function mount(host) {
         <span class="kb-glow" aria-hidden="true"></span>
       </div>
       <p class="kb-status" data-ref="status" aria-live="polite"></p>
-      <button type="button" class="btn btn-default kb-enable" data-act="enable" hidden>${svgIcon(ICON_PHONE, 18)} Aktifkan kompas</button>
+      <button type="button" class="btn btn-default kb-enable" data-act="enable" hidden>${icon('phone', 18)} Aktifkan kompas</button>
     </section>
 
     <section class="kb-stats" aria-label="Data kiblat">
       <div class="kb-stat">
-        <span class="kb-stat-ic">${svgIcon(ICON_KAABA, 18)}</span>
+        <span class="kb-stat-ic">${icon('compass', 18)}</span>
         <span class="muted-xs">Arah kiblat</span>
         <strong class="kb-stat-val tnum" data-ref="bearing"></strong>
         <span class="muted-xs" data-ref="dir"></span>

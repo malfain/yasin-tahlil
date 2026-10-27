@@ -1,6 +1,6 @@
 {
-  "tool_name": "mcp__claude-in-chrome__navigate",
+  "tool_name": "mcp__Claude_Browser__navigate",
   "error": "Tool execution failed (details omitted for privacy).",
-  "timestamp": "2026-10-27T12:55:18.962Z",
-  "retry_count": 1
+  "timestamp": "2026-10-27T15:07:33.742Z",
+  "retry_count": 2
 }

@@ -4,6 +4,7 @@ import { esc, pad, isDark, setDark, replay } from '../ui.js';
 import * as store from '../store.js';
 import { times, hm, WAJIB, cityNow, nextPrayer, masehi, hijri } from '../prayer.js';
 import { currentLocation, detectStatus, EVENT as LOC_EVENT } from '../location.js';
+import { isStandalone, isIOS, canPrompt, promptInstall, EVENT as INSTALL_EVENT } from '../install.js';
 import { FEATURES } from '../data/features.js';
 import { TOTAL_AYAT } from '../data/yasin.js';
 
@@ -64,6 +65,8 @@ export function mount(host) {
       <span dir="rtl" lang="ar" class="arab">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</span>
       <span class="muted-sm center">Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang</span>
     </div>
+
+    <div data-ref="install"></div>
 
     <section aria-label="Bacaan" class="features">
       <div class="section-head">
@@ -156,5 +159,24 @@ export function mount(host) {
   };
   window.addEventListener(LOC_EVENT, onLoc);
 
-  return { el, destroy: () => { clearInterval(timer); window.removeEventListener(LOC_EVENT, onLoc); } };
+  // Kartu "Pasang aplikasi": Android memakai dialog instal bawaan, iPhone diberi langkah Safari.
+  const paintInstall = () => {
+    const box = $('install');
+    if (isStandalone() || (!canPrompt() && !isIOS())) { box.innerHTML = ''; return; }
+    box.innerHTML = `
+      <div class="install-card">
+        <span class="install-ic">${icon('phone', 22)}</span>
+        <div class="install-text">
+          <strong>Pasang di HP</strong>
+          <span>${canPrompt() ? 'Buka langsung dari layar utama, seperti aplikasi biasa.' : 'Di Safari: ketuk tombol Bagikan, lalu pilih “Tambahkan ke Layar Utama”.'}</span>
+        </div>
+        ${canPrompt() ? '<button type="button" class="btn btn-default btn-sm" data-act="install">Pasang</button>' : ''}
+      </div>`;
+    const b = box.querySelector('[data-act="install"]');
+    if (b) b.addEventListener('click', () => promptInstall().then(paintInstall));
+  };
+  paintInstall();
+  window.addEventListener(INSTALL_EVENT, paintInstall);
+
+  return { el, destroy: () => { clearInterval(timer); window.removeEventListener(LOC_EVENT, onLoc); window.removeEventListener(INSTALL_EVENT, paintInstall); } };
 }

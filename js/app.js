@@ -15,6 +15,7 @@ import * as kalender from './views/kalender.js';
 import * as zakat from './views/zakat.js';
 import { createDrawer } from './views/menu.js';
 import { autoDetect } from './location.js';
+import { initInstall } from './install.js';
 
 const VIEWS = { '': home, yasin, tahlil, jadwal, asma, surat, surah, baca, kiblat, tasbih, kalender, zakat };
 const TITLES = { '': 'Yasin & Tahlil', yasin: 'Surah Yasin', tahlil: 'Tahlil', jadwal: 'Jadwal Sholat & Imsak', asma: 'Asmaul Husna', surat: 'Juz Amma & Surat Pilihan', surah: 'Surat', baca: 'Bacaan',
@@ -77,5 +78,6 @@ function route() {
 }
 
 window.addEventListener('hashchange', route);
+initInstall();
 route();
 autoDetect();

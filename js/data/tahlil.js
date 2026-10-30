@@ -394,8 +394,8 @@ export function tahlilSteps(jumlahTahlil = 160) {
         },
         {
           "label": "Pengantar penghuni baru kubur",
-          "arab": "اللَّهُمَّ عَبْدُكَ وَابْنُ عَبْدَيْكَ خَرَجَ مِنْ رَّوْحِ الدُّنْيَا وَسَعَتِهَا وَمَحْبُوْبِهِ وَاَحِبَّائِهِ فِيْهَا اِلَى ظُلْمَةِ الْقَبْرِ وَمَا هُوَ لَاقِيْهِ كَانَ يَشْهَدُ اَنْ لَا اِلَهَ اِلَّا اَنْتَ وَاَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُوْلُكَ وَاَنْتَ اَعْلَمُ بِهِ",
-          "latin": "Allāhumma ‘abduka wabnu ‘abdaika kharaja mir rauḥid-dunyā wa sa‘atihā wa maḥbūbihī wa aḥibbā’ihī fīhā ilā ẓulmatil-qabri wa mā huwa lāqīh, kāna yasyhadu al lā ilāha illā anta wa anna Muḥammadan ‘abduka wa rasūluk, wa anta a‘lamu bih.",
+          "arab": "اللَّهُمَّ عَبْدُكَ وَابْنَ عَبْدَيْكَ خَرَجَ مِنْ رَّوْحِ الدُّنْيَا وَسَعَتِهَا وَمَحْبُوْبِهِ وَاَحِبَّائِهِ فِيْهَا اِلَى ظُلْمَةِ الْقَبْرِ وَمَا هُوَ لَاقِيْهِ كَانَ يَشْهَدُ اَنْ لَا اِلَهَ اِلَّا اَنْتَ وَاَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُوْلُكَ وَاَنْتَ اَعْلَمُ بِهِ",
+          "latin": "Allāhumma ‘abduka wabna ‘abdaika kharaja mir rauḥid-dunyā wa sa‘atihā wa maḥbūbihī wa aḥibbā’ihī fīhā ilā ẓulmatil-qabri wa mā huwa lāqīh, kāna yasyhadu al lā ilāha illā anta wa anna Muḥammadan ‘abduka wa rasūluk, wa anta a‘lamu bih.",
           "arti": "Ya Allah, ini hamba-Mu dan anak dari kedua hamba-Mu. Ia keluar dari kebahagiaan dan keluasan dunia, orang yang dicintai, dan para kekasihnya di dunia menuju kegelapan kubur dan apa yang akan ia jumpai di dalamnya. Ia dulu pernah bersaksi bahwa tiada tuhan selain Engkau dan Nabi Muhammad SAW adalah hamba dan utusan-Mu. Kau pun lebih tahu akan hal ini."
         },
         {

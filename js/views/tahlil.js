@@ -1,15 +1,17 @@
-// Tahlil lengkap: teks penuh tiap langkah (Arab, latin, arti), penghitung ketuk yang menempel di
+// Tahlil lengkap versi Kitab Majmu' Syarif (NU): teks penuh tiap langkah (Arab, latin, arti), penghitung ketuk yang menempel di
 // bawah, mode tampilan & ukuran huruf seperti layar Yasin, serta daftar urutan bacaan.
 import { icon } from '../icons.js';
 import { esc, replay, vibrate, toast, reducedMotion } from '../ui.js';
 import * as store from '../store.js';
-import { tahlilSteps } from '../data/tahlil.js';
+import { tahlilSteps, JUMLAH_TAHLIL } from '../data/tahlil.js';
 
 const MODES = [['lengkap', 'Lengkap'], ['latin', 'Arab-Latin'], ['arab', 'Arab saja']];
 const MIN_SIZE = 20, MAX_SIZE = 40;
 
 export function mount(host) {
-  let jumlah = store.get('tahlilJumlah', 100) === 33 ? 33 : 100;
+  // Bawaan 160× sesuai Kitab Majmu' Syarif; pilihan lain tetap tersedia.
+  let jumlah = Number(store.get('tahlilJumlah', 160));
+  if (!JUMLAH_TAHLIL.includes(jumlah)) jumlah = 160;
   let list = tahlilSteps(jumlah);
   const saved = store.get('tahlil', { idx: 0, count: 0 }) || {};
   let idx = Math.max(0, Math.min(list.length - 1, Number(saved.idx) || 0));
@@ -48,7 +50,7 @@ export function mount(host) {
     <div class="setting-row">
       <span class="label" id="lbl-jumlah">Jumlah bacaan tahlil</span>
       <div class="seg seg-sm" role="radiogroup" aria-labelledby="lbl-jumlah">
-        ${[33, 100].map((n) => `<button type="button" role="radio" data-jumlah="${n}" aria-checked="${n === jumlah}">${n}×</button>`).join('')}
+        ${JUMLAH_TAHLIL.map((n) => `<button type="button" role="radio" data-jumlah="${n}" aria-checked="${n === jumlah}">${n}×</button>`).join('')}
       </div>
     </div>
     <h2 class="list-title">Urutan bacaan</h2>

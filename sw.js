@@ -2,7 +2,7 @@
 // Strategi: file aplikasi diambil dari jaringan dulu (selalu versi terbaru saat online), cadangan
 // dari cache saat offline. Font Google di-cache saat pertama dipakai. API (equran.id,
 // BigDataCloud) tidak disentuh; aplikasi sudah menyimpan hasilnya sendiri.
-const CACHE = 'yasin-tahlil-v1';
+const CACHE = 'yasin-tahlil-v2';
 const PRECACHE = [
     './',
     'index.html',
